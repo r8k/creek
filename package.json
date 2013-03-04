@@ -10,8 +10,7 @@
     "ejs": "0.8.3",
     "usergrid": "*",
     "passport": "0.1.16",
-    "passport-local": "0.1.6",
-    "should": "1.2.2"
+    "passport-local": "0.1.6"
   },
   "keywords": [
     "creek",
