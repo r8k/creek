@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+    
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width">
+        <meta charset="utf-8">
+        <title>Creek</title>
+        <link rel="stylesheet" href="stylesheets/style.css" type="text/css" media="screen">
+        <link rel="stylesheet" href="stylesheets/icomoon.css" type="text/css" media="screen">
+        <link rel="stylesheet" href="stylesheets/bootstrap.min.css" type="text/css" media="screen">
+        <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    </head>
+    
+    <body>
+        <div>
+            <form action="/login" class="well form-inline sigin" method="post">
+                <div class="buttonHolder">
+                    <span id="logo">
+                        <i aria-hidden="true" style="font-size:25px;" class="icon-feather"></i>
+                        creek
+                    </span>
+                </div>
+                <div>
+                    <input type="text" id="signin-email" class="input" name="username" title="Username or email" tabindex="1"
+                    placeholder="Email" autocomplete="off">
+                </div>
+                <div>
+                    <input type="password" id="signin-password" class="input" name="password" title="Password" tabindex="2"
+                    placeholder="Password">
+                </div>
+                <div class="buttonHolder">
+                    <button type="submit" class="submit btn primary-btn btn-success" id="go" tabindex="3">Sign in</button>
+                </div>
+            </form>
+        </div>
+        <script type="text/javascript" charset="utf-8">
+            if (window.location.pathname != '/') {
+                window.location.pathname = window.location.pathname.slice(0, 0);
+            };
+        </script>
+    </body>
+
+</html>

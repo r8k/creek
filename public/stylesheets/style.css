@@ -1,0 +1,22 @@
+.sigin {
+  position: fixed;
+  right: 45%;
+  top: 30%;
+}
+
+#signin-email, #signin-password {
+  margin-bottom: 5px;
+}
+
+#go {
+  width:100%;
+}
+
+#logo {
+  font-size: 35px;
+  font-family: "Lato", serif;
+}
+
+.buttonHolder {
+  text-align: center;
+}
