@@ -2,27 +2,74 @@ HEADER = {
     'Content-Type': 'text/javascript'
 };
 
-/**
- * Login
- */
+var client = new usergrid.client(usergridClientOptions);
 
+/**
+ * GET /
+ */
 exports.home = function (req, res) {
     res.render('index.ejs');
 };
 
 /**
- * GET all items.
+ * GET /item/:uid
  */
-
 exports.fetch = function (req, res) {
-    res.send(items);
+    var options = {
+        type: 'users',
+        username: req.params.id
+    };
+    client.getEntity(options, function (err, existingUser) {
+        if (err) {
+            console.log(err);
+        } else {
+            res.send(JSON.stringify({
+                status: 'success',
+                user: existingUser
+            }), HEADER, 200);
+        };
+    });
 };
 
 /**
- * POST a new item.
+ * GET /allitems
+ */
+exports.fetchall = function (req, res) {
+    var options = {
+        type: 'users',
+        qs: {
+            ql: 'select *'
+        }
+    };
+    client.createCollection(options, function (err, existingUsers) {
+        if (err) {
+            console.log(err);
+        } else {
+            res.send(JSON.stringify({
+                status: 'success',
+                users: existingUsers
+            }), HEADER, 200);
+        };
+    });
+};
+
+/**
+ * POST /item
  */
 exports.create = function (req, res) {
-    res.send(JSON.stringify({
-      status: 'success',
-    }), HEADER, 200);
+    var options = {
+        type: 'users',
+        username: 'joe',
+        getOnExist: true
+    };
+    client.createEntity(options, function (err, user) {
+        if (err) {
+            console.log(err);
+        } else {
+            res.send(JSON.stringify({
+                status: 'success',
+                user: user
+            }), HEADER, 200);
+        };
+    });
 };

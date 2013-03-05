@@ -1,6 +1,4 @@
-var appConfig = {};
-
-appConfig.port = 8000;
-appConfig.address = 'localhost';
-
-module.exports = appConfig;
+exports.usergridClientOptions = usergridClientOptions = {
+    orgName: 'r8k',
+    appName: 'sandbox'
+};
