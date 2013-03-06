@@ -1,0 +1,4 @@
+{
+  "glob": ["app.js", "config/**/*.js", "README.md", "controls/**/*.js",
+  			"routes/**/*.js", "settings/**/*.js", "test/**/*.js", "utils/**/*.js"]
+}

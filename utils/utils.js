@@ -16,7 +16,9 @@ exports.dateFormat = dateFormat = function (date, fstr, utc) {
 			case '%S': m = date[utc + 'Seconds'] (); break;
 			default: return m.slice (1); // unknown code, remove %
 		}
-		// add leading zero if required
+		/**
+		 * add leading zero if required
+		 */
 		return ('0' + m).slice (-2);
 	});
 };
