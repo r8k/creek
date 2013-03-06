@@ -27,7 +27,7 @@ exports.formatLogMsg = formatLogMsg = function (requestBody) {
 	return requestBody;
 };
 
-exports.customLog = customLog = function(tokens, req, res){
+exports.expresslog = expresslog = function(tokens, req, res){
   var status = res.statusCode
   , len = parseInt(res.getHeader('Content-Length'), 10)
   , color = 32;

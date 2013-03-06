@@ -3,7 +3,7 @@ express.logger.format('customLog', utils.customLog);
 app.use(connect.compress());
 app.use(express.bodyParser());
 app.use(express.errorHandler());
-app.use(express.logger('customLog'));
+app.use(express.logger('express-log'));
 app.engine('html', ejs.renderFile);
 app.set('views', __dirname + '/../views');
 app.use(express.cookieParser());
