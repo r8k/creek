@@ -10,11 +10,18 @@ var Logger = function (log_level) {
     this._log_level = log_level ? log_level : 2
 }
 
+// # Logger.js
+// Logger.js is our custom Logging functionality used inside creek.
+// We use the Logger object instead of console.log, to stream out
+// the date & time of the logging event to be included.
 Logger.prototype = {
     _timestamp: function (msg) {
         return (new Date()).toLocaleString().slice(0, 24);
     },
 
+    // Similar to commercial loggers, we have four levels of logging implemented
+    // here, respectively: Debug, Info, Warn, Error; Debug being the last level that
+    // can be used to emit out all events.
     debug: function (msg) {
         if (this._log_level < 3) {
             return;
