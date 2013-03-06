@@ -5,7 +5,7 @@ HEADER = {
 var client = new usergrid.client(usergridClientOptions);
 
 /**
- * GET /
+ * GET / index
  */
 exports.home = function (req, res) {
     res.render('index.ejs');
