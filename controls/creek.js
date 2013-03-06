@@ -1,6 +1,6 @@
 // # creek.js
 // creek.js has the core functionality of creek.
-// This is invoked from the route.js for the appropriate methods to be called in.
+// This is invoked from the route.js for the appropriate methods to be called.
 HEADER = {
     'Content-Type': 'text/javascript'
 };
