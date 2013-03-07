@@ -14,6 +14,11 @@ app.post('/login', passport.authenticate('local', {
     failureRedirect: '/'
 }));
 
+app.get('/logout', function(req, res){
+    req.logout();
+    res.redirect('/');
+  });
+
 // For all unnecessary routes, re-route them to our index page.
 app.get('*', function (req, res) {
     res.redirect('/');

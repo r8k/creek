@@ -29,8 +29,7 @@ var results = {
  */
 exports.home = function (req, res) {
     res.render('index.ejs', {
-        process: results,
-        version: '0.0.6'
+        process: results
       });
 };
 
