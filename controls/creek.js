@@ -8,10 +8,30 @@ HEADER = {
 var client = new usergrid.client(usergridClientOptions);
 
 /**
+ * {
+        process: results,
+        version: pkg.version
+    }
+ */
+
+var results = {
+            "type": "user",
+            "username": "joe",
+            "getOnExist": true,
+            "uuid": "8393342d-857b-11e2-bb35-02e81ae640dc",
+            "created": 1362477630947,
+            "modified": 1362657841445,
+            "apps": ["app1", "app2", "app3"]
+        };
+
+/**
  * GET / index
  */
 exports.home = function (req, res) {
-    res.render('index.ejs');
+    res.render('index.ejs', {
+        process: results,
+        version: '0.0.6'
+      });
 };
 
 /**

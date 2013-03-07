@@ -20,3 +20,101 @@
 .buttonHolder {
   text-align: center;
 }
+
+.container {
+  padding: 75px;
+}
+
+.components {
+	width: 75%;
+	max-width: 1140px;
+	min-width: 300px;
+}
+
+.component {
+	position: relative;
+	overflow: hidden;
+	border-bottom: 1px solid #eee;
+	padding: 16px 0px;
+	font-size: 20px;
+}
+
+body {
+	font: 16px/1.6 "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #272727;
+}
+
+#search input {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index: 10;
+	font-size: 40px;
+	padding: 15px 30px;
+	font-family: inherit;
+	font-weight: 100;
+	border: none;
+	outline: none;
+	line-height: 45px;
+	border-bottom: 5px solid #eee;
+	background: rgba(255,255,255, .95);
+	width: 100%;
+}
+
+.component h3 {
+	margin: 0;
+	line-height: 1.3;
+}
+
+.component h3 a {
+	color: inherit;
+}
+
+.component .header {
+	float: left;
+	width: 20%;
+	margin-right: 20px;
+}
+
+.component .repo {
+	font-size: 12px;
+	color: #7f7f7f;
+}
+
+.component p {
+	overflow: hidden;
+	margin: 2px 0 0 0;
+	line-height: 1.3;
+	max-width: 40em;
+}
+
+.component .info {
+	float: right;
+	max-width: 10em;
+	margin-left: 20px;
+	margin: 6px 0 0 0;
+	font-size: 12px;
+	color: #7f7f7f;
+	display: block;
+	line-height: 1.4;
+}
+
+.component .info td {
+  vertical-align: top
+}
+
+.component .info td:first-child {
+  opacity: 0.6;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
+  filter: alpha(opacity=60);
+  width: 20%;
+  padding-right: 10px
+}
+
+footer {
+	position: fixed;
+	top: 0;
+	right: 2%;
+	font-size: 16px;
+	font-family: "Lato", serif;
+}

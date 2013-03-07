@@ -9,7 +9,8 @@ app.post('/item', ensureAuthenticated, creek.create);
 // And as said earlier, we do use passport for authentication,
 // and use the LocalStrategy to work for us.
 app.post('/login', passport.authenticate('local', {
-    successRedirect: '/items',
+    //successRedirect: '/items',
+    successRedirect: '/',
     failureRedirect: '/'
 }));
 
