@@ -151,10 +151,18 @@ body {
   padding-right: 10px
 }
 
-footer {
+#attribution {
 	position: fixed;
 	top: 0;
-	right: 2%;
+	right: 8%;
+	font-size: 16px;
+	font-family: "Lato", serif;
+}
+
+#logout {
+	position: fixed;
+	top: 0;
+	right: 3%;
 	font-size: 16px;
 	font-family: "Lato", serif;
 }

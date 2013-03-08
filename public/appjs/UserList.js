@@ -1,5 +1,5 @@
-App.ProcessList = Backbone.Collection.extend({
-    model: App.Process,
+App.UserList = Backbone.Collection.extend({
+    model: App.User,
 
     url: '/',
 
@@ -8,7 +8,6 @@ App.ProcessList = Backbone.Collection.extend({
     },
 
     getByPID: function(pid) {
-      // this.detect == find
       return this.detect(function(process) {
           return process.get('pid') == pid;
       });

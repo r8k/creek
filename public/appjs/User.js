@@ -1,7 +1,7 @@
 // Process model
 // Dependencies: prettyDate
 
-App.Process = Backbone.Model.extend({
+App.User = Backbone.Model.extend({
     defaults: {
         type: '',
         username: '',

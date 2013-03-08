@@ -1,17 +1,13 @@
 <!DOCTYPE html>
-<html lang="en" class="">
-    
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width">
-        <meta charset="utf-8">
-        <title>Creek</title>
-        <link rel="stylesheet" href="stylesheets/style.css" type="text/css" media="screen">
-        <link rel="stylesheet" href="stylesheets/icomoon.css" type="text/css" media="screen">
-        <link rel="stylesheet" href="stylesheets/bootstrap.min.css" type="text/css" media="screen">
-    </head>
-    
+<html>
+<head>
+  <title>creek</title>
+  <link rel="stylesheet" href="stylesheets/style.css" type="text/css" media="screen">
+  <link rel="stylesheet" href="stylesheets/icomoon.css" type="text/css" media="screen">
+  <link rel="stylesheet" href="stylesheets/bootstrap.min.css" type="text/css" media="screen">
+</head>
     <body>
+        <script id="login-tmpl" type="text/html">
         <div>
             <form action="/login" class="well form-inline sigin" method="post">
                 <div class="buttonHolder">
@@ -33,11 +29,29 @@
                 </div>
             </form>
         </div>
+        </script>
         <script type="text/javascript" charset="utf-8">
             if (window.location.pathname != '/') {
                 window.location.pathname = window.location.pathname.slice(0, 0);
             };
         </script>
-    </body>
 
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/backbone.js/0.9.10/backbone-min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js"></script>
+        <script type="text/javascript" charset="utf-8">
+            var App = {};
+        </script>
+        <script src="appjs/AppView.js" type="text/javascript" charset="utf-8"></script>
+        <script src="appjs/User.js" type="text/javascript" charset="utf-8"></script>
+        <script src="appjs/UserList.js" type="text/javascript" charset="utf-8"></script>
+        <script src="appjs/UserView.js" type="text/javascript" charset="utf-8"></script>
+        <script src="appjs/LoginView.js" type="text/javascript" charset="utf-8"></script>
+        <script type="text/javascript" charset="utf-8">
+            $(function () {
+                App.creek = new App.LoginView( <%- JSON.stringify(process) %> );
+            });
+        </script>
+    </body>
 </html>

@@ -66,6 +66,8 @@ exports.ensureAuthenticated = ensureAuthenticated = function (req, res, next) {
     if (req.isAuthenticated()) {
         return next();
     } else {
-        res.render('login.ejs');
+        res.render('login.ejs', {
+            process: {}
+          });
     };
 }

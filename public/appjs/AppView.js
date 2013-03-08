@@ -7,7 +7,7 @@ App.AppView = Backbone.View.extend({
 
     initialize: function(processData) {
       // Create our process collection
-      this.Processes = new App.ProcessList();
+      this.Processes = new App.UserList();
 
       this.Processes.bind('all', this.updateAll, this);
 
@@ -16,7 +16,7 @@ App.AppView = Backbone.View.extend({
     },
 
     addOne: function(process){
-      var view = new App.ProcessView({model: process});
+      var view = new App.UserView({model: process});
       this.$("#process-list").append(view.render().el);
     },
 
