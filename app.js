@@ -19,6 +19,7 @@ bytes = require('bytes');
 ejs = require('ejs');
 passport = require('passport');
 usergrid = require('usergrid');
+sessionStore = new express.session.MemoryStore;
 LocalStrategy = require('passport-local').Strategy;
 
 // ### Local modules

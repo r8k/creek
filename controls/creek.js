@@ -36,12 +36,12 @@ exports.home = function (req, res) {
 /**
  * GET /item/:uid
  */
+var fetchOptions = {
+    type: 'users'
+};
 exports.fetch = function (req, res) {
-    var options = {
-        type: 'users',
-        username: req.params.id
-    };
-    client.getEntity(options, function (err, existingUser) {
+    fetchOptions.username = req.params.id;
+    client.getEntity(fetchOptions, function (err, existingUser) {
         if (err) {
             console.log(err);
         } else {
@@ -56,14 +56,14 @@ exports.fetch = function (req, res) {
 /**
  * GET /allitems
  */
+var fetchallOptions = {
+    type: 'users',
+    qs: {
+        ql: 'select *'
+    }
+};
 exports.fetchall = function (req, res) {
-    var options = {
-        type: 'users',
-        qs: {
-            ql: 'select *'
-        }
-    };
-    client.createCollection(options, function (err, existingUsers) {
+    client.createCollection(fetchallOptions, function (err, existingUsers) {
         if (err) {
             console.log(err);
         } else {
@@ -78,13 +78,13 @@ exports.fetchall = function (req, res) {
 /**
  * POST /item
  */
+var createOptions = {
+    type: 'users',
+    username: 'joe',
+    getOnExist: true
+};
 exports.create = function (req, res) {
-    var options = {
-        type: 'users',
-        username: 'joe',
-        getOnExist: true
-    };
-    client.createEntity(options, function (err, user) {
+    client.createEntity(createOptions, function (err, user) {
         if (err) {
             console.log(err);
         } else {

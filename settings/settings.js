@@ -16,7 +16,9 @@ app.set('views', __dirname + '/../views');
 app.use(express.cookieParser());
 app.use(express.methodOverride());
 app.use(express.session({
-    secret: 'cr33k'
+	store: sessionStore,
+    secret: 'cr33k',
+    cookie: {maxAge: 900000}
 }));
 app.use(express.static(__dirname + '/../public'))
 app.use(passport.initialize());
