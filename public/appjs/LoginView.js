@@ -5,7 +5,7 @@ App.LoginView = Backbone.View.extend({
       'submit .well.form-inline.sigin': 'login'
     },
 
-    initialize: function(response) {
+    initialize: function() {
       this.model = new Backbone.Model();
       $(document.body).append(this.render().el);
     },
