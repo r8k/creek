@@ -27,10 +27,19 @@ var results = {
 /**
  * GET / index
  */
+// exports.home = function (req, res) {
+//     res.render('index.ejs', {
+//         process: results
+//       });
+// };
 exports.home = function (req, res) {
-    res.render('index.ejs', {
+    res.render('index.ejs');
+};
+
+exports.getdata = function (req, res) {
+    res.json({
         process: results
-      });
+    });
 };
 
 /**

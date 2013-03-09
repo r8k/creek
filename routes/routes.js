@@ -1,6 +1,7 @@
 // # routes.js
 // routes.js defines all our available routes and what we do with them.
 app.get('/', ensureAuthenticated, creek.home);
+app.get('/data', ensureAuthenticated, creek.getdata);
 app.get('/item/:id', ensureAuthenticated, creek.fetch);
 app.get('/allitems', ensureAuthenticated, creek.fetchall);
 app.get('/items', ensureAuthenticated, creek.create);
