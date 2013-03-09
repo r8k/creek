@@ -1,5 +1,5 @@
 // Filename: index-app.js
-define([
+define("index-app",[
   'jquery',
   'underscore',
   'backbone',

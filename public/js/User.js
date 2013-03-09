@@ -1,7 +1,7 @@
 // Process model
 // Dependencies: prettyDate
 
-define([
+define("User",[
   'jquery',
   'underscore',
   'backbone',

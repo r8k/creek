@@ -1,4 +1,4 @@
-define([
+define('LoginView',[
   'jquery',
   'underscore',
   'backbone',

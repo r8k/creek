@@ -1,4 +1,4 @@
-define([
+define("UserView",[
   'jquery',
   'underscore',
   'backbone',

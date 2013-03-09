@@ -1,4 +1,4 @@
-define([
+define("UserList",[
   'jquery',
   'underscore',
   'backbone',

@@ -16,3 +16,4 @@ require([
 ], function(App){
   App.initialize();
 });
+define("login", function(){});

@@ -1,5 +1,5 @@
 // Filename: login-app.js
-define([
+define('login-app',[
   'jquery',
   'underscore',
   'backbone',
