@@ -1,10 +1,15 @@
 module.exports = function(grunt) {
   grunt.initConfig({
+    banner: '/*! creek - v0.0.1 - ' +
+      '<%= grunt.template.today("yyyy-mm-dd") %>\n' +
+      '* Copyright (c) <%= grunt.template.today("yyyy") %> Rajiv Kilaparti;' +
+      '  */\n',
     clean: {
       src: ['public/dist']
     },
     concat: {
       options: {
+        banner: '<%= banner %>',
         stripBanners: true
       },
       css: {
@@ -43,12 +48,18 @@ module.exports = function(grunt) {
       },
     },
     uglify: {
+      options: {
+        banner: '<%= banner %>'
+      },
       dist: {
         src: '<%= concat.js_login.dest %>',
         dest: 'public/dist/creek-login.min.js'
       },
     },
     uglify: {
+      options: {
+        banner: '<%= banner %>'
+      },
       dist: {
         src: '<%= concat.js_app.dest %>',
         dest: 'public/dist/creek-index.min.js'
