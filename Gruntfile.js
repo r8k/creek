@@ -49,18 +49,14 @@ module.exports = function(grunt) {
     },
     uglify: {
       options: {
-        banner: '<%= banner %>'
+        banner: '<%= banner %>',
+        compress: true
       },
-      dist: {
+      login: {
         src: '<%= concat.js_login.dest %>',
         dest: 'public/dist/creek-login.min.js'
       },
-    },
-    uglify: {
-      options: {
-        banner: '<%= banner %>'
-      },
-      dist: {
+      index: {
         src: '<%= concat.js_app.dest %>',
         dest: 'public/dist/creek-index.min.js'
       },
